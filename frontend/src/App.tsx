@@ -1,5 +1,14 @@
+import { BrowserRouter, Route, Routes } from "react-router";
+import HomePage from "./pages/Home.page";
+
 function App() {
-  return <h1>Recipe Search App</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
