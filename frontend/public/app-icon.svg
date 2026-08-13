@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">まいにち冷蔵庫</title>
+  <desc id="description">深緑の背景に白いボウルとオレンジ色の葉</desc>
+  <rect width="512" height="512" rx="112" fill="#285943"/>
+  <circle cx="402" cy="112" r="52" fill="#db5a3a"/>
+  <path d="M132 226h248c0 100-51 166-124 166s-124-66-124-166Z" fill="#fffdf8"/>
+  <path d="M164 226c13-53 50-86 92-86s79 33 92 86" fill="none" stroke="#fffdf8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M263 186c24-50 65-72 111-66-17 43-55 67-111 66Z" fill="#db5a3a"/>
+  <path d="M252 190c-9-38-35-62-73-69 5 39 31 63 73 69Z" fill="#f1c56b"/>
+  <path d="M194 422h124" fill="none" stroke="#fffdf8" stroke-width="24" stroke-linecap="round"/>
+</svg>
