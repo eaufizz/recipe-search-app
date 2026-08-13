@@ -1,24 +1,24 @@
 {
-  "id": "/",
+  "id": "./",
   "name": "まいにち冷蔵庫 - あるものでレシピ",
   "short_name": "まいにち冷蔵庫",
   "description": "冷蔵庫にある食材から作れそうな料理を探せるレシピアプリ",
   "lang": "ja",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "theme_color": "#285943",
   "background_color": "#f7f3ea",
   "icons": [
     {
-      "src": "/pwa-192x192.png",
+      "src": "./pwa-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/pwa-512x512.png",
+      "src": "./pwa-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { HashRouter, Route, Routes } from 'react-router';
 import { BottomNavigation, Header } from './components/Header';
 import { StatusPanel } from './components/StatusPanel';
 import { useUserIngredients } from './hooks/useUserIngredients';
@@ -18,7 +18,7 @@ function App() {
   } = useUserIngredients();
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header ingredientCount={ingredients.length} />
       {isLoading ? (
         <Page>
@@ -66,7 +66,7 @@ function App() {
         </Routes>
       )}
       <BottomNavigation />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
