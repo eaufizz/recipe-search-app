@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router";
-import HomePage from "./pages/Home.page";
-import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from 'react-router';
+import HomePage from './pages/Home.page';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;
