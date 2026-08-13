@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { theme } from "../styles/theme";
-import { Link } from "react-router";
+import styled from 'styled-components';
+import { theme } from '../styles/theme';
+import { Link } from 'react-router';
 
 const HeaderContainer = styled.header`
   background-color: ${theme.colors.primary};
