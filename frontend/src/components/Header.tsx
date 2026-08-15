@@ -34,14 +34,8 @@ const Brand = styled(Link)`
 `;
 
 const BrandMark = styled.span`
-  display: grid;
   width: 2.5rem;
   height: 2.5rem;
-  place-items: center;
-  border-radius: 14px;
-  background: ${theme.colors.primary};
-  color: ${theme.colors.white};
-  font-size: 1.25rem;
 `;
 
 const PantryCount = styled(Link)`
@@ -64,7 +58,9 @@ export function Header({ ingredientCount }: { ingredientCount: number }) {
     <HeaderBar>
       <HeaderInner>
         <Brand to="/" aria-label="まいにち冷蔵庫 ホーム">
-          <BrandMark aria-hidden="true">♻</BrandMark>
+          <BrandMark aria-hidden="true">
+            <img src="/app-icon.svg" alt="まいにち冷蔵庫" />
+          </BrandMark>
           まいにち冷蔵庫
         </Brand>
         <PantryCount to="/ingredients">
