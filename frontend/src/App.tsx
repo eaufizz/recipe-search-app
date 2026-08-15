@@ -1,15 +1,15 @@
-import { BrowserRouter, Route, Routes } from 'react-router';
-import HomePage from './pages/Home.page';
-import Header from './components/Header';
+import { HashRouter } from 'react-router';
+import { Header } from './components/Header';
+
+import { BottomNavigation } from './components/BottomNavigation';
 
 function App() {
+
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </BrowserRouter>
+    <HashRouter>
+      <Header ingredientCount={0} />
+      <BottomNavigation />
+    </HashRouter>
   );
 }
 
