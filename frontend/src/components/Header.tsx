@@ -59,7 +59,10 @@ export function Header({ ingredientCount }: { ingredientCount: number }) {
       <HeaderInner>
         <Brand to="/" aria-label="まいにち冷蔵庫 ホーム">
           <BrandMark aria-hidden="true">
-            <img src="/app-icon.svg" alt="まいにち冷蔵庫" />
+            <img
+              src={`${import.meta.env.BASE_URL}app-icon.svg`}
+              alt="まいにち冷蔵庫"
+            />
           </BrandMark>
           まいにち冷蔵庫
         </Brand>
