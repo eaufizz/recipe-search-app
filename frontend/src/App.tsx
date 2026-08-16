@@ -11,7 +11,7 @@ function App() {
     <HashRouter>
       <Header ingredientCount={0} />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage ingredients={[]} />} />
         <Route path="/ingredients" element={<IngredientsPage />} />
         <Route path="/recipes" element={<RecipeListPage />} />
         <Route path="/recipes/:id" element={<RecipeDetailPage />} />
