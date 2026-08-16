@@ -1,6 +1,6 @@
-import { NavLink } from "react-router";
-import styled from "styled-components";
-import { theme } from "../styles/theme";
+import { NavLink } from 'react-router';
+import styled from 'styled-components';
+import { theme } from '../styles/theme';
 
 const BottomBar = styled.nav`
   position: fixed;
