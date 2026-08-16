@@ -1,72 +1,73 @@
+import { Link } from 'react-router';
 import styled from 'styled-components';
 import { theme } from '../styles/theme';
-import { Link } from 'react-router';
 
-const HeaderContainer = styled.header`
-  background-color: ${theme.colors.primary};
-  color: ${theme.colors.text};
-  padding: 0 1rem;
-  position: fixed;
+const HeaderBar = styled.header`
+  position: sticky;
+  z-index: 20;
   top: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+  border-bottom: 1px solid rgba(222, 216, 204, 0.88);
+  background: rgba(247, 243, 234, 0.92);
+  backdrop-filter: blur(16px);
 `;
 
 const HeaderInner = styled.div`
-  position: relative;
   display: flex;
+  width: min(100%, 720px);
+  min-height: 4rem;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 0.55rem 1rem;
 `;
 
-const HomeButton = styled.button`
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  background: transparent;
-  color: ${theme.colors.text};
-  font-size: 3rem;
-  cursor: pointer;
-  padding: 0.6rem;
-  width: 4rem;
-  height: 4rem;
-  display: grid;
-  place-items: center;
-
-  &:hover {
-    opacity: 0.85;
-  }
-`;
-
-const HomeLink = styled(Link)`
-  color: white;
+const Brand = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: ${theme.colors.primaryStrong};
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-
-  &:hover {
-    opacity: 0.8;
-  }
 `;
 
-function Header() {
+const BrandMark = styled.span`
+  width: 2.5rem;
+  height: 2.5rem;
+`;
+
+const PantryCount = styled(Link)`
+  display: inline-flex;
+  min-height: 2.65rem;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: ${theme.radius.pill};
+  background: ${theme.colors.surface};
+  color: ${theme.colors.primaryStrong};
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: ${theme.shadow.card};
+`;
+
+export function Header({ ingredientCount }: { ingredientCount: number }) {
   return (
-    <HeaderContainer>
+    <HeaderBar>
       <HeaderInner>
-        <HomeLink to="/">
-          <HomeButton aria-label="ホームに戻る">⌂</HomeButton>
-        </HomeLink>
-        <h1>材料→レシピ検索アプリ</h1>
+        <Brand to="/" aria-label="まいにち冷蔵庫 ホーム">
+          <BrandMark aria-hidden="true">
+            <img src="/app-icon.svg" alt="まいにち冷蔵庫" />
+          </BrandMark>
+          まいにち冷蔵庫
+        </Brand>
+        <PantryCount to="/ingredients">
+          <span aria-hidden="true">🥕</span>
+          食材 {ingredientCount}件
+        </PantryCount>
       </HeaderInner>
-    </HeaderContainer>
+    </HeaderBar>
   );
 }
-
-export default Header;
