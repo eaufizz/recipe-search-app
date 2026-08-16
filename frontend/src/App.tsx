@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { BottomNavigation } from './components/BottomNavigation';
 
 function App() {
-
   return (
     <HashRouter>
       <Header ingredientCount={0} />
