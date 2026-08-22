@@ -1,0 +1,28 @@
+import type { Ingredient } from '../types/ingredient';
+
+export const ingredients: Ingredient[] = [
+  { id: 'onion', name: '玉ねぎ', category: 'vegetable', emoji: '🧅' },
+  { id: 'carrot', name: 'にんじん', category: 'vegetable', emoji: '🥕' },
+  { id: 'potato', name: 'じゃがいも', category: 'vegetable', emoji: '🥔' },
+  { id: 'cabbage', name: 'キャベツ', category: 'vegetable', emoji: '🥬' },
+  { id: 'green-pepper', name: 'ピーマン', category: 'vegetable', emoji: '🫑' },
+  { id: 'tomato', name: 'トマト', category: 'vegetable', emoji: '🍅' },
+  { id: 'mushroom', name: 'きのこ', category: 'vegetable', emoji: '🍄' },
+  { id: 'green-onion', name: 'ねぎ', category: 'vegetable', emoji: '🌿' },
+  { id: 'chicken', name: '鶏肉', category: 'meat', emoji: '🍗' },
+  { id: 'pork', name: '豚肉', category: 'meat', emoji: '🥩' },
+  { id: 'ground-meat', name: 'ひき肉', category: 'meat', emoji: '🥩' },
+  { id: 'salmon', name: '鮭', category: 'seafood', emoji: '🐟' },
+  { id: 'tuna', name: 'ツナ', category: 'seafood', emoji: '🐟' },
+  { id: 'egg', name: '卵', category: 'dairy', emoji: '🥚' },
+  { id: 'milk', name: '牛乳', category: 'dairy', emoji: '🥛' },
+  { id: 'cheese', name: 'チーズ', category: 'dairy', emoji: '🧀' },
+  { id: 'rice', name: 'ごはん', category: 'staple', emoji: '🍚' },
+  { id: 'pasta', name: 'パスタ', category: 'staple', emoji: '🍝' },
+  { id: 'tofu', name: '豆腐', category: 'staple', emoji: '⬜' },
+  { id: 'miso', name: 'みそ', category: 'seasoning', emoji: '🥣' },
+  { id: 'soy-sauce', name: 'しょうゆ', category: 'seasoning', emoji: '🫙' },
+  { id: 'ketchup', name: 'ケチャップ', category: 'seasoning', emoji: '🍅' },
+  { id: 'butter', name: 'バター', category: 'seasoning', emoji: '🧈' },
+  { id: 'ginger', name: 'しょうが', category: 'seasoning', emoji: '🫚' },
+];
