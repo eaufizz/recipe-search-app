@@ -43,7 +43,10 @@ function App() {
               />
             }
           />
-          <Route path="/recipes" element={<RecipeListPage />} />
+          <Route
+            path="/recipes"
+            element={<RecipeListPage userIngredients={ingredients} />}
+          />
           <Route path="/recipes/:id" element={<RecipeDetailPage />} />
         </Routes>
       )}
