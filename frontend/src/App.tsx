@@ -47,7 +47,10 @@ function App() {
             path="/recipes"
             element={<RecipeListPage userIngredients={ingredients} />}
           />
-          <Route path="/recipes/:id" element={<RecipeDetailPage />} />
+          <Route
+            path="/recipes/:recipeId"
+            element={<RecipeDetailPage userIngredients={ingredients} />}
+          />
         </Routes>
       )}
       <BottomNavigation />
