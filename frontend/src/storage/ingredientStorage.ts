@@ -17,9 +17,6 @@ function isUserIngredient(value: unknown): value is UserIngredient {
     candidate.name.trim().length > 0 &&
     (candidate.ingredientId === undefined ||
       typeof candidate.ingredientId === 'string') &&
-    (candidate.quantity === undefined ||
-      (typeof candidate.quantity === 'number' &&
-        Number.isFinite(candidate.quantity))) &&
     (candidate.unit === undefined || typeof candidate.unit === 'string')
   );
 }
