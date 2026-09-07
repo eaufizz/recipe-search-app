@@ -96,32 +96,6 @@ const CatalogButton = styled.button<{ $selected: boolean }>`
   }
 `;
 
-const OptionalFields = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.65rem;
-  margin-top: 0.75rem;
-
-  label {
-    color: ${theme.colors.textMuted};
-    font-size: 0.78rem;
-    font-weight: 750;
-  }
-
-  input,
-  select {
-    width: 100%;
-    min-height: 3rem;
-    margin-top: 0.35rem;
-    padding: 0 0.75rem;
-    border: 1px solid ${theme.colors.border};
-    border-radius: ${theme.radius.small};
-    background: ${theme.colors.surface};
-    color: ${theme.colors.text};
-    font-size: 1rem;
-  }
-`;
-
 const AddRow = styled.div`
   margin-top: 0.75rem;
 `;
@@ -180,7 +154,6 @@ function IngredientsPage({
 }: IngredientsPageProps) {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState<'all' | IngredientCategory>('all');
-  const [quantity, setQuantity] = useState('');
   const [unit, setUnit] = useState('');
 
   const filteredIngredients = useMemo(() => {
@@ -198,18 +171,12 @@ function IngredientsPage({
     );
 
   const addIngredient = (name: string, catalogIngredient?: Ingredient) => {
-    const parsedQuantity = quantity ? Number(quantity) : undefined;
     onAdd({
       ingredientId: catalogIngredient?.id,
       name: name.trim(),
-      quantity:
-        parsedQuantity !== undefined && Number.isFinite(parsedQuantity)
-          ? parsedQuantity
-          : undefined,
       unit: unit || undefined,
     });
     setQuery('');
-    setQuantity('');
     setUnit('');
   };
 
@@ -259,35 +226,6 @@ function IngredientsPage({
             </CategoryButton>
           ))}
         </CategoryList>
-
-        <OptionalFields>
-          <label>
-            数量（任意）
-            <input
-              type="number"
-              min="0"
-              step="any"
-              inputMode="decimal"
-              value={quantity}
-              onChange={(event) => setQuantity(event.target.value)}
-              placeholder="例：2"
-            />
-          </label>
-          <label>
-            単位（任意）
-            <select
-              value={unit}
-              onChange={(event) => setUnit(event.target.value)}
-            >
-              <option value="">なし</option>
-              <option value="個">個</option>
-              <option value="本">本</option>
-              <option value="枚">枚</option>
-              <option value="g">g</option>
-              <option value="ml">ml</option>
-            </select>
-          </label>
-        </OptionalFields>
         <AddRow>
           <Button type="submit" fullWidth disabled={!query.trim()}>
             「{query.trim() || '食材名'}」を登録

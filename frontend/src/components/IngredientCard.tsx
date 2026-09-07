@@ -37,15 +37,10 @@ type IngredientCardProps = {
 };
 
 function IngredientCard({ ingredient, onRemove }: IngredientCardProps) {
-  const quantityLabel = ingredient.quantity
-    ? `${ingredient.quantity}${ingredient.unit ?? ''}`
-    : '数量なし';
-
   return (
     <Item>
       <Details>
         <strong>{ingredient.name}</strong>
-        <span>{quantityLabel}</span>
       </Details>
       <Button
         type="button"
